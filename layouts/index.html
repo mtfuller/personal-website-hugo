@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+    <div class="hero" data-theme="dark">
+        {{ partial "header/site-nav.html" . }}
+        {{ partial "header/hero-avatar.html" . }}
+    </div>
+
+    <main class="container">
+        <section>
+            <div class="grid">
+                <div>
+                    <h2>{{ partial "icons/about.html" . }}About</h2>
+                    <p>
+                        I'm an Atlanta-based software engineer, passionate about software, cloud and FinTech. Check out my skills and experience!
+                    </p>
+                    <a href="/about" role="button">Learn More</a>
+                </div>
+                <div></div>
+            </div>
+        </section>
+        <section>
+            <div class="grid">
+                <div></div>
+                <div align="right">
+                    <h2>{{ partial "icons/blog.html" . }}Blog</h2>
+                    <p>
+                        I try to write about what I'm learning, as it really does help me think clearly. Feel free to take a look at some of my posts!
+                    </p>
+                    <a href="/blog" role="button">See Posts</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="grid">
+                <div align="left">
+                    <h2>{{ partial "icons/projects.html" . }}Projects</h2>
+                    <p>
+                        In my freetime, I really enjoy building new and exciting solutions. Hop on over and see some of the projects I've been working on!
+                    </p>
+                    <a href="/projects" role="button">Browse Projects</a>
+                </div>
+                <div></div>
+            </div>
+        </section>
+        <section>
+            <div class="grid">
+                <div></div>
+                <div align="right">
+                    <h2>{{ partial "icons/contact.html" . }}Contact</h2>
+                    <p>
+                        If you would like to reach out to me, either for a business inquery or to just say "hi", then feel free to send me a message!
+                    </p>
+                    <a href="/contact" role="button">Contact Me</a>
+                </div>
+            </div>
+        </section>
+        <div>
+            {{ .Content }}
+        </div>
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <script src="/minimal-theme-switcher.js"></script>
+
+{{ end }}

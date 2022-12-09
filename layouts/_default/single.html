@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+    <div class="hero" data-theme="dark">
+        {{ partial "header/site-nav.html" . }}
+        {{ partial "header/page-title.html" . }}
+    </div>
+
+    <main class="container">
+        {{ .Content }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <script src="/minimal-theme-switcher.js"></script>
+
+{{ end }}

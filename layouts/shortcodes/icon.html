@@ -1,0 +1,19 @@
+{{- $icon := .Get 0 -}}
+
+{{ if eq $icon "backend" }}
+    {{ partial "icons/backend.html" }}
+{{ else if eq $icon "bank" }}
+    {{ partial "icons/bank.html" }}
+{{ else if eq $icon "cloud" }}
+    {{ partial "icons/cloud.html" }}
+{{ else if eq $icon "frontend" }}
+    {{ partial "icons/frontend.html" }}
+{{ else if eq $icon "github" }}
+    {{ partial "icons/github.html" }}
+{{ else if eq $icon "linkedin" }}
+    {{ partial "icons/linkedin.html" }}
+{{ else if eq $icon "money" }}
+    {{ partial "icons/money.html" }}
+{{ else if eq $icon "twitter" }}
+    {{ partial "icons/twitter.html" }}
+{{ end }}

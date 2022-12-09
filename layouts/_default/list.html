@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<div class="hero" data-theme="dark">
+    {{ partial "header/site-nav.html" . }}
+    {{ partial "header/page-title.html" . }}
+</div>
+
+<main class="container">
+    {{ range .Pages }}
+        <a href="{{.Permalink}}">
+            <article style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.8)), url('{{.RelPermalink}}/{{.Params.featured_image}}');">
+                <footer>
+                    <hgroup>
+                        <h2>{{ .Title }}</h2>
+                        <small>{{ .Date.Format "January 2, 2006" }}</small>
+                        <h3>{{ .Summary }}</h3>
+                    </hgroup>
+                </footer>
+            </article>
+        </a>
+    {{ end }}
+</main>
+
+{{ partial "footer.html" . }}
+
+<script src="/minimal-theme-switcher.js"></script>
+
+{{ end }}
