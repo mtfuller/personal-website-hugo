@@ -18,7 +18,9 @@ All code for this project can be found on my [GitHub repo](https://github.com/m
 
 Before jumping into coding, I took a good amount of time to experiment and research different approaches I could take. The game server uses both socket.io and express.js to communicate with clients. I used socket.io to continuously send game data to each client.
 
-![https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/architecture.png](https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/architecture.png)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/architecture.png" alt="Architecture" />
+</p>
 
 Each client, once connected to the socket.io server, sends the player's input to the server, in order change the direction of the ship or trigger the ship’s weapon.
 
@@ -36,7 +38,9 @@ Another big question that I had during my design phase was: “what's the best w
 
 If the distance falls under a certain threashold, like the sum of the ships' radii, then the ships have collided. If we wanted to find all collisions for a given set of ships, then we might approach it like this:
 
-![https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/brute_force.png](https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/brute_force.png)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/brute_force.png" alt="Brute Force" />
+</p>
 
 In a brute force approach, we take one ship, and then perform a collision check on every other ship in the game. Next, we move on to the next ship, and so on. As you might imagine, there’s a lot of collision checking going on.
 
@@ -44,7 +48,9 @@ This may not be a problem with a small number of ships, but as the number of pla
 
 One common approach to efficiently perform collision checking is to use something called, "spatial hashing". Spatial hashing is the process of partitioning the whole board into many “buckets”. Next, each entity’s x-y coordinates are hashed to get a key. This key then determines which bucket the entity belongs to.
 
-![https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/spatial_hashing.png](https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/spatial_hashing.png)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/mtfuller/pew-pew-pew.io/master/docs/img/spatial_hashing.png" alt="Spatial Hashing" />
+</p>
 
 By placing each entity into a bucket, now we only perform collision detection on entities in nearby buckets. If two buckets are far away from each other, there is no need to if their entities have collided. So, by only checking entities in nearby buckets, we can avoid a lot of pointless collision checking.
 

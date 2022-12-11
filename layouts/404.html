@@ -13,16 +13,6 @@
 
     <title>Thomas Fuller | {{ .Title }}</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110944297-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-110944297-1');
-    </script>
-
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="application/javascript">
       window.onload = function() {
@@ -34,8 +24,20 @@
     </script>
   </head>
   <body>
-    {{ block "main" . }}
+    <div class="hero" data-theme="dark">
+        {{ partial "header/site-nav.html" . }}
+        {{ partial "header/page-title.html" . }}
+    </div>
 
-    {{ end }}
+    <main class="container">
+        <h1>Unable to find page, sorry!</h1>
+        <p>
+            Please navigate to the <a href="/">homepage</a> and see if you can navigate to what you are looking for from there.
+        </p>
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <script src="/minimal-theme-switcher.js"></script>
   </body>
 </html>

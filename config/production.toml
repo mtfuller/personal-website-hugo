@@ -1,6 +1,6 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://thomasfuller.codes/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Thomas Fuller'
 
 [markup.goldmark.renderer]
 unsafe= true

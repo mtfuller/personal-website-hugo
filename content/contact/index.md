@@ -4,7 +4,7 @@ summary: "Feel free to send me a message and say hi."
 draft: false
 ---
 
-<form>
+<form name="contact-form" accept-charset="utf-8" action="https://formspree.io/f/mrgrlabr" method="post">
     <label for="fullname">
       Full name
       <input type="text" id="fullname" name="fullname" placeholder="John Smith" required>
@@ -22,5 +22,7 @@ draft: false
     </select>
     <label for="message">Message</label>
     <textarea id="message"></textarea>
+    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    <div class="g-recaptcha" data-sitekey="6LePyEYcAAAAAKhnpMZoOrW8g9pV8wQh_PFDkPSr"></div>
     <button type="submit">Send Message</button>
 </form>

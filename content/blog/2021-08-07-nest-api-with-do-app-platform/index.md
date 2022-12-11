@@ -382,6 +382,6 @@ From here, you can configure your app's HTTP routes, environment variables, run 
 
 However, if you would like to quickly spin up this example to try it out, you can click the the "Deploy to DigitalOcean" button below.
 
-![https://www.deploytodo.com/do-btn-blue.svg](https://www.deploytodo.com/do-btn-blue.svg)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/mtfuller/nest-digitalocean-app/tree/main&refcode=012f39345103)
 
 ### Warning: Deploying the application may result in charges against your account.

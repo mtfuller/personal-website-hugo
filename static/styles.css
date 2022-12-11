@@ -93,3 +93,6 @@ svg {
     margin-right: 5px;
 }
 
+main > p > img {
+    text-align: center;
+}
