@@ -8,7 +8,7 @@
 <main class="container">
     {{ range .Pages }}
         <a href="{{.Permalink}}">
-            <article style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.8)), url('{{.RelPermalink}}/{{.Params.featured_image}}');">
+            <article style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.8)), url('{{.RelPermalink}}{{.Params.featured_image}}');">
                 <footer>
                     <hgroup>
                         <h2>{{ .Title }}</h2>
