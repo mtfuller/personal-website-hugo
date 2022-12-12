@@ -8,7 +8,7 @@
 const themeSwitcher = {
   
     // Config
-    _scheme: "auto",
+    _scheme: "dark",
     menuTarget: "details[role='list']",
     buttonsTarget: "a[data-theme-switcher]",
     buttonAttribute: "data-theme-switcher",
@@ -18,7 +18,6 @@ const themeSwitcher = {
     // Init
     init() {
       this.scheme = this.schemeFromLocalStorage;
-      console.log(this.scheme)
       this.initSwitchers();
     },
   
@@ -85,8 +84,6 @@ const themeSwitcher = {
       }
     },
   };
-
-  console.log("HELLO!")
   
   // Init
   themeSwitcher.init();
