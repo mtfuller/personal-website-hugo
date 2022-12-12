@@ -12,6 +12,20 @@
   --muted-color: #bac1c7;
 }
 
+/* Pink Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="light"] {
+    --primary: #da3939;
+    --primary-hover: #af2d2d;
+    --primary-focus: rgba(216, 27, 27, 0.25);
+    --primary-inverse: #FFF;
+    --background-color: #202028;
+    --h1-color: var(--primary);
+    --h2-color: #FFF;
+    --h3-color: #999999;
+    --muted-color: #bac1c7;
+  }
+
 /* Global CSS variables */
 :root {
     --spacing-company: 3rem;
