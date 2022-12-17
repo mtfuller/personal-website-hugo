@@ -1,6 +1,7 @@
 ---
 title: "Contact"
 summary: "Feel free to send me a message and say hi."
+keywords: ["contact", "Thomas Fuller", "message", "connect"]
 draft: false
 ---
 

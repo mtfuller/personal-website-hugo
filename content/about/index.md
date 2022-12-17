@@ -1,6 +1,7 @@
 ---
 title: "About"
 summary: "A little blurb about me."
+keywords: ["Thomas", "Fuller", "software engineer", "Atlanta", "cloud", "FinTech", "developer"]
 draft: false
 ---
 #### Hello, I'm Thomas!

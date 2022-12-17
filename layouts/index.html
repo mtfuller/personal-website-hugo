@@ -1,6 +1,9 @@
 {{ define "main" }}
 
-    <div class="hero" data-theme="dark">
+    {{ $image := resources.Get "hero-background.jpg" }}
+    {{ $image := $image.Resize "1500x webp q50" }}
+
+    <div class="hero" data-theme="dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.65)), url('{{$image.RelPermalink}}')">
         {{ partial "header/site-nav.html" . }}
         {{ partial "header/hero-avatar.html" . }}
     </div>
@@ -13,7 +16,7 @@
                     <p>
                         I'm an Atlanta-based software engineer, passionate about software, cloud and FinTech. Check out my skills and experience!
                     </p>
-                    <a href="/about" role="button">Learn More</a>
+                    <a href="/about" role="button">About Me</a>
                 </div>
                 <div></div>
             </div>

@@ -1,6 +1,7 @@
 ---
 title: "Deploy a Nest.js API with DigitalOcean's App Platform"
 summary: "Nest.js is a Node.js API framework that includes a variety of built..."
+keywords: ["Nest.js", "Node.js", "DigitalOcean", "App Platform", "api", "framework", "deploy"]
 date: 2021-09-07
 featured_image: "images/splash.jpg"
 draft: false

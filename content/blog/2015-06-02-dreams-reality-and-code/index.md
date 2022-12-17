@@ -1,6 +1,7 @@
 ---
 title: "Dreams, Reality, and Code"
 summary: "To be honest, I never would have thought I would be walking down this..."
+keywords: ["dream", "reality", "code", "programming"]
 date: 2015-06-02
 featured_image: "images/splash.jpg"
 draft: false

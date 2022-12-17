@@ -1,3 +1,17 @@
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary: #da3939;
+        --primary-hover: #af2d2d;
+        --primary-focus: rgba(216, 27, 27, 0.25);
+        --primary-inverse: #FFF;
+        --background-color: #202028;
+        --h1-color: var(--primary);
+        --h2-color: #FFF;
+        --h3-color: #999999;
+        --muted-color: #bac1c7;
+    }
+}
+
 /* Pink Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
@@ -12,9 +26,9 @@
   --muted-color: #bac1c7;
 }
 
-/* Pink Dark scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
-[data-theme="light"] {
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --color: white;
     --primary: #da3939;
     --primary-hover: #af2d2d;
     --primary-focus: rgba(216, 27, 27, 0.25);
@@ -23,8 +37,9 @@
     --h1-color: var(--primary);
     --h2-color: #FFF;
     --h3-color: #999999;
+    --h4-color: #FFF;
     --muted-color: #bac1c7;
-  }
+}
 
 /* Global CSS variables */
 :root {
@@ -87,7 +102,7 @@ header hgroup > :last-child {
 }
 
 article {
-    background-color: #2c73b1;
+    background-color: #454545;
     background-image: linear-gradient(rgba(0, 0, 0, 0.627),rgba(0, 0, 0, 0.6)), url('hero-background.jpg');
     background-position: center;
     background-size: cover;

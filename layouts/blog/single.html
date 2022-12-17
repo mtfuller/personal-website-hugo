@@ -13,10 +13,12 @@
 
 {{ end }}
 
-
 {{ define "main" }}
 
-    <div class="hero" data-theme="dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.8)), url('{{.RelPermalink}}/{{.Params.featured_image}}');">
+    {{ $image := .Resources.Get "images/splash.jpg" }}
+    {{ $image := $image.Resize "1000x webp q75" }}
+
+    <div class="hero" data-theme="dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.8)), url('{{$image.RelPermalink}}');">
         {{ partial "header/site-nav.html" . }}
         {{ partial "header/post-title.html" . }}
     </div>

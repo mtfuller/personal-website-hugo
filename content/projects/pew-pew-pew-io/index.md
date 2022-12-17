@@ -1,6 +1,7 @@
 ---
 title: "Pew-Pew-Pew.io Game"
 summary: "About a year ago, I was just starting to learn Node.js. During that..."
+keywords: ["Socket.io", "Node.js", "real-time", "entity", "component", "system", "spatial hasing"]
 date: 2018-04-29
 featured_image: "images/demo.gif"
 draft: false
