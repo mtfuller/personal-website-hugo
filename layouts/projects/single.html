@@ -16,7 +16,7 @@
 {{ define "main" }}
 
     {{ $image := .Resources.Get .Params.featured_image }}
-    {{ $image := $image.Resize "1000x webp q75" }}
+    {{ $image := $image.Resize "1000x q75" }}
 
     <div class="hero" data-theme="dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.8)), url('{{.RelPermalink}}/{{.Params.featured_image}}');">
         {{ partial "header/site-nav.html" . }}
