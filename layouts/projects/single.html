@@ -18,7 +18,7 @@
     {{ $image := .Resources.Get .Params.featured_image }}
     {{ $image := $image.Resize "1000x q75" }}
 
-    <div class="hero" data-theme="dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.8)), url('{{.RelPermalink}}/{{.Params.featured_image}}');">
+    <div class="hero" data-theme="dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.8)), url('{{.RelPermalink}}/{{.Params.featured_image}}');">
         {{ partial "header/site-nav.html" . }}
         {{ partial "header/post-title.html" . }}
     </div>
