@@ -69,7 +69,7 @@ However, suppose the frontend sends a new HTTP request with invalid data. The ba
 
 ## How Should We Model Software?
 
-The 2017 study by the University of Trier showcases the importance of diagramming as a means of communication. I believe UML has lost relevance in areas of the software industry due to how verbose the notation is, and how costly it is to maintain. Instead of developing a large modeling notations, recent trends in software modeling have moved toward simpler modeling approaches. Simon Brown’s C4 architecture framework provides a simple notation and focuses on having different layers of granularity when visualizing a software system.
+The 2017 study by the University of Trier showcases the importance of diagramming as a means of communication. I believe UML has lost relevance in areas of the software industry due to how verbose the notation is, and how costly it is to maintain. Instead of developing a large modeling notation, recent trends in software modeling have moved toward simpler modeling approaches. Simon Brown’s C4 architecture framework provides a simple notation and focuses on having different layers of granularity when visualizing a software system.
 
 <p align="center">
 <img src="images/c4.png" alt="Brute Force" />
