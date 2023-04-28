@@ -377,7 +377,9 @@ Now we are ready to deploy our app!
 
 If you have a GitHub account, you can easily connect it to the DigitalOcean App Platform. Then, simply select which repo you want to use to create and launch the app.
 
-![https://thomasfuller.codes/content/images/2021/09/001.jpg](https://thomasfuller.codes/content/images/2021/09/001.jpg)
+<p align="center">
+<img src="images/do_deploy.jpeg" alt="Brute Force" />
+</p>
 
 From here, you can configure your app's HTTP routes, environment variables, run command, etc. following DigitalOcean's [App Platform How-To](https://docs.digitalocean.com/products/app-platform/how-to/create-apps/).
 
