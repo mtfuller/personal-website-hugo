@@ -51,7 +51,7 @@ On a more personal level, I am a Christian, saved by grace alone. I enjoy spendi
 # Experience
 <section>
 <hgroup>
-    <h2>Software Engineer, Payments</h2>
+    <h2>Senior Software Engineer, Payments</h2>
     <h3>Genuine Parts Company | Apr 2022 - Present</h3>
 </hgroup>
 
