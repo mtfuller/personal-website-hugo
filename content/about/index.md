@@ -7,7 +7,7 @@ draft: false
 #### Hello, I'm Thomas!
 I am a software developer, based out of Atlanta, Georgia. 
 
-I'm passionate about crafting robust software, building cloud-native solutions, and watching the ever-changing FinTech industry.
+I'm passionate about crafting robust software, building cloud-native solutions, and following the ever-changing FinTech industry.
 
 On a more personal level, I am a Christian, saved by grace alone. I enjoy spending time with friends and family, strolling through nature, and playing mandolin.
 
@@ -34,7 +34,7 @@ On a more personal level, I am a Christian, saved by grace alone. I enjoy spendi
         <h4>{{< icon "cloud" >}} Cloud.</h4>
         <ul>
             <li>AWS (EC2, SQS, KMS)</li>
-            <li>Google Cloud (Run, Storage)</li>
+            <li>Google Cloud (Run, Storage, Function)</li>
             <li>DigitalOcean (Droplets, App Platform)</li>
         </ul>
     </div>
@@ -55,8 +55,10 @@ On a more personal level, I am a Christian, saved by grace alone. I enjoy spendi
     <h3>Genuine Parts Company | Apr 2022 - Present</h3>
 </hgroup>
 
-- Worked an agile development team to develop solutions to power payment infrastructure for all of Genuine Parts Company. 
-- Designed and implemented solutions using Spring Boot (Java), built on top of the Google Cloud Platform.
+- Collaborated within an Agile development team to successfully deliver new features for payments-related business solutions.
+- Assisted in the validation and deployment of production-ready payment solutions to Google Cloud Platform, utilizing technologies such as Java Spring Boot, Cloud SQL, Pub/Sub, and more.
+- Took ownership of developing productivity-enhancing tools, boosting the team's efficiency.
+- Promoted coding standards and best practices, driving their adoption across the entire team.
 </section>
 
 <section>
