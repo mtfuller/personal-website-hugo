@@ -17,10 +17,9 @@ On a more personal level, I am a Christian, saved by grace alone. I enjoy spendi
         <h4>{{< icon "backend" >}}Backend.</h4>
         <ul>
             <li>Java (Spring Boot)</li>
-            <li>TypeScript (NodeJS, ExpressJS, NestJS)</li>
-            <li>Python</li>
-            <li>Databases (MySQL, Mongo)</li>
-            <li>Docker</li>
+            <li>Golang (Gin)</li>
+            <li>TypeScript (Node, NestJS)</li>
+            <li>Databases (MySQL, PostgreSQL)</li>
         </ul>
     </div>
     <div>
@@ -33,8 +32,8 @@ On a more personal level, I am a Christian, saved by grace alone. I enjoy spendi
     <div>
         <h4>{{< icon "cloud" >}} Cloud.</h4>
         <ul>
-            <li>AWS (EC2, SQS, KMS)</li>
-            <li>Google Cloud (Run, Storage, Function)</li>
+            <li>AWS (EC2, Lambda, SQS, KMS)</li>
+            <li>Google Cloud (Run, Storage, Function, GKE)</li>
             <li>DigitalOcean (Droplets, App Platform)</li>
         </ul>
     </div>
@@ -42,7 +41,7 @@ On a more personal level, I am a Christian, saved by grace alone. I enjoy spendi
         <h4>{{< icon "money" >}} FinTech.</h4>
         <ul>
             <li>Payments (PCI DSS, EMV)</li>
-            <li>Encryption</li>
+            <li>P2P Encryption</li>
             <li>Tokenization</li>
         </ul>
     </div>
@@ -55,9 +54,11 @@ On a more personal level, I am a Christian, saved by grace alone. I enjoy spendi
     <h3>Genuine Parts Company | Apr 2022 - Present</h3>
 </hgroup>
 
-- Collaborated within an Agile development team to successfully deliver new features for payments-related business solutions.
-- Assisted in the validation and deployment of production-ready payment solutions to Google Cloud Platform, utilizing technologies such as Java Spring Boot, Cloud SQL, Pub/Sub, and more.
-- Took ownership of developing productivity-enhancing tools, boosting the team's efficiency.
+- Delivered new payments-related business solutions as a part of an Agile development team.
+- Led a team of 6-7 engineers to develop solutions to handle card-present transactions.
+- Designed and implemented production-ready applications utilizing Google Cloud Platform products, such as Cloud Run, GKE, CloudSQL, Storage, Functions, Pub/Sub, and Monitoring.
+- Utilized technologies such as Java (Spring Boot), Go (Gin), and TypeScript.
+- Proactively created productivity-enhancing tools, boosting the team's efficiency.
 - Promoted coding standards and best practices, driving their adoption across the entire team.
 </section>
 
@@ -84,14 +85,20 @@ On a more personal level, I am a Christian, saved by grace alone. I enjoy spendi
 - Designed, developed, tested, and documented new features for iOS, Android, and Java (Windows) platforms.
 </section>
 
+# Certifications
+
+<section>
+<hgroup>
+    <h2>Google Cloud Certified Professional Cloud Architect</h2>
+    <h3>Google | Expires Dec. 2025</h3>
+</hgroup>
+</section>
+
 # Education
 
 <section>
 <hgroup>
     <h2>Bachelor's of Science in Computer Science</h2>
-    <h3>Kennesaw State University | Aug 2014 - May 2018</h3>
+    <h3>Kennesaw State University | GPA 3.77 | Aug 2014 - May 2018</h3>
 </hgroup>
-
-- GPA: 3.77
-- Notable courses taken: Data Structures, Digital Image Processing, Artificial Intelligence, and Data Mining.
 </section>
