@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'Thomas Fuller'
 
 [params]
-  description = "Thomas Fuller builds the software that moves money: payments architecture, card-present systems, gateways and AI-assisted engineering. Payments technical lead and Stripe-certified architect in Atlanta, GA."
+  description = "Thomas Fuller builds solutions that move money: payments architecture, card-present systems, gateways and AI-assisted engineering. Payments technical lead and Stripe-certified architect in Atlanta, GA."
   author = "Thomas Fuller"
   location = "Atlanta"
   coordinates = "33.75° N, 84.39° W"

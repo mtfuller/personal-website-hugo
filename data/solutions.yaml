@@ -1,47 +1,51 @@
-# Solutions shown on the homepage, newest first. Company names live on the
-# About page; here each card leads with the problem and what was built.
-#   problem:  one sentence on what needed solving
-#   built:    what you designed and shipped
+# Solutions shown on the homepage. Company names live on the About page;
+# each card leads with the industry and what was built.
+#   flow:     the payment path, left to right; wrap the parts you built in
+#             [brackets] and they're highlighted
+#   summary:  one or two sentences on the problem and the solution
+#   built:    a couple of short specifics
 #   outcome:  optional; a result worth calling out (shown in accent)
-- period: "2025 – now"
-  current: true
-  industry: "Consulting"
-  role: "Technical lead"
-  title: "Payment and billing solutions for clients"
-  problem: "Clients across many industries need payment and billing systems designed and delivered on mission-critical timelines."
-  built:
-    - "Payment solutions designed and built for clients across a variety of industries."
-    - "Team lead on mission-critical client deliveries."
-  stack: ["Stripe", "Payments architecture", "Billing"]
-
-- period: "2022 – 2025"
-  industry: "Retail"
-  role: "Lead engineer"
+#   role, period: shown small at the foot of the card
+- industry: "Retail"
   title: "In-store card payments for a national retailer"
-  problem: "Every in-store sale needed card-present transactions handled reliably at national-retailer scale."
+  summary: "Card-present transaction handling behind every in-store sale, built cloud-native on Google Cloud."
+  flow: ["Store checkout", "[Card-present services]", "Processor"]
   built:
-    - "Card-present transaction handling on Google Cloud: Cloud Run, GKE, Cloud SQL and Pub/Sub."
-    - "Internal tools that boosted the team's efficiency."
-    - "Coding standards adopted across a team of 7 engineers I led."
+    - "Services on Cloud Run and GKE, backed by Cloud SQL and Pub/Sub."
+    - "Internal tooling and coding standards that sped up the whole team."
   stack: ["Java", "Go", "TypeScript", "Google Cloud"]
+  role: "Lead engineer"
+  period: "2022 – 2025"
 
-- period: "2020 – 2022"
-  industry: "Integrated payments"
-  role: "Team lead"
-  title: "A microservice payment gateway and its EMV terminal fleet"
-  problem: "Software platforms and their merchants needed new gateway capabilities, plus a fleet of EMV terminals that kept working."
+- industry: "Integrated payments"
+  title: "A payment gateway and its EMV terminal fleet"
+  summary: "New gateway capabilities for software platforms and their merchants, plus the EMV terminals they take payments on."
+  flow: ["[EMV terminals]", "[Payment gateway]", "Processor"]
   built:
-    - "New gateway services on AWS (Lambda, KMS, EC2 and S3), from design through validation."
-    - "Delivered with a team of 6 engineers I led."
+    - "Microservices on AWS Lambda, KMS, EC2 and S3, from design through validation."
     - "Subject-matter expertise for the platform's EMV-capable terminal fleet."
   stack: ["TypeScript", "Node.js", "PHP", "AWS"]
+  role: "Team lead"
+  period: "2020 – 2022"
 
-- period: "2018 – 2020"
-  industry: "Merchant acquiring"
-  role: "Engineer"
+- industry: "Consulting"
+  title: "Payment and billing architectures on Stripe"
+  summary: "Payment and billing solutions for clients across many industries, designed and delivered as a Stripe-certified architect."
+  flow: ["Client systems", "[Payments + billing design]", "Stripe"]
+  built:
+    - "Payment solutions for clients across a variety of industries."
+    - "Mission-critical client deliveries, as team lead."
+  stack: ["Stripe", "Payments", "Billing"]
+  role: "Technical lead"
+  period: "2025 – now"
+
+- industry: "Merchant acquiring"
   title: "A mobile payments SDK for merchant apps"
-  problem: "Merchants wanted to take card-present payments inside their own apps."
+  summary: "Let merchants take card-present payments inside their own apps, on every platform they ship to."
+  flow: ["Card reader", "[Payments SDK]", "Merchant app", "Acquirer"]
   built:
     - "SDK features designed, built, tested and documented end to end."
     - "Shipped across iOS, Android and Windows."
   stack: ["iOS", "Android", "Java"]
+  role: "Engineer"
+  period: "2018 – 2020"

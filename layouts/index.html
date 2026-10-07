@@ -17,25 +17,41 @@
     <div class="solutions">
       {{- range site.Data.solutions }}
       <article class="card solution">
-        <p class="meta"><span{{ if .current }} class="accent"{{ end }}>{{ .period }}</span><span>{{ .industry }}</span>{{ with .role }}<span>{{ . }}</span>{{ end }}</p>
-        <h3 class="title">{{ .title }}</h3>
-        {{- with .problem }}
-        <p class="problem">{{ . }}</p>
+        {{- with .flow }}
+        <div class="media">
+          <div class="flow-head" aria-hidden="true"><span>Payment flow</span><span class="flow-key">Built</span></div>
+          <ol class="flow" aria-label="Payment flow">
+            {{- range . }}
+            {{- if hasPrefix . "[" }}
+            <li class="built"><strong>{{ trim . "[]" }}</strong><span class="visually-hidden"> (built)</span></li>
+            {{- else }}
+            <li>{{ . }}</li>
+            {{- end }}
+            {{- end }}
+          </ol>
+        </div>
         {{- end }}
-        {{- with .built }}
-        <div class="built">
-          <p class="kicker">What I built</p>
-          <ul>
+        <div class="body">
+          <p class="label">{{ .industry }}</p>
+          <h3 class="title">{{ .title }}</h3>
+          {{- with .summary }}
+          <p class="summary">{{ . }}</p>
+          {{- end }}
+          {{- with .built }}
+          <ul class="built-list">
             {{- range . }}
             <li>{{ . }}</li>
             {{- end }}
           </ul>
+          {{- end }}
+          {{- with .outcome }}
+          <p class="outcome">{{ . }}</p>
+          {{- end }}
+          {{- partial "tag-list.html" (dict "tags" .stack "link" false) }}
+          {{- if or .role .period }}
+          <p class="meta foot">{{ with .role }}<span>{{ . }}</span>{{ end }}{{ with .period }}<span>{{ . }}</span>{{ end }}</p>
+          {{- end }}
         </div>
-        {{- end }}
-        {{- with .outcome }}
-        <p class="outcome">{{ . }}</p>
-        {{- end }}
-        {{- partial "tag-list.html" (dict "tags" .stack "link" false) }}
       </article>
       {{- end }}
     </div>
