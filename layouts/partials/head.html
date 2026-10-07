@@ -13,7 +13,7 @@
 </script>
 
 {{- $title := printf "%s · %s" .Title site.Title }}
-{{- if .IsHome }}{{ $title = printf "%s · Payments & software engineering" site.Title }}{{ end }}
+{{- if .IsHome }}{{ $title = printf "%s · Payments × Engineering" site.Title }}{{ end }}
 {{- if eq .Kind "404" }}{{ $title = printf "Page not found · %s" site.Title }}{{ end }}
 {{- $desc := .Description }}
 {{- if not $desc }}{{ $desc = .Summary | plainify | htmlUnescape }}{{ end }}

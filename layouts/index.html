@@ -1,38 +1,41 @@
 {{ define "header" }}{{ partial "hero-home.html" . }}{{ end }}
 
 {{ define "main" }}
-{{- /* ---------- Experience ---------- */}}
-<section id="experience" aria-labelledby="experience-title">
+{{- /* ---------- Solutions ---------- */}}
+<section id="solutions" aria-labelledby="solutions-title">
   <div class="wrap section">
     {{- $resume := "" }}{{ with site.GetPage "/about" }}{{ $resume = .RelPermalink }}{{ end }}
     {{ partial "section-header.html" (dict
-      "label" "Experience"
-      "id" "experience-title"
-      "title" "Eight years designing and building payment systems"
+      "label" "Solutions"
+      "id" "solutions-title"
+      "title" "Payment systems I've designed and built"
       "actions" (slice
         (dict "text" "Full résumé" "url" $resume)
         (dict "text" "LinkedIn ↗" "url" site.Params.linkedin "external" true)
       )
     ) }}
-    <div class="rows">
-      {{- range site.Data.experience }}
-      <article class="row">
-        <div class="row-meta">
-          <span class="primary">{{ if .current }}<span class="dot" aria-hidden="true"></span>{{ end }}{{ .period }}</span>
-          <span class="secondary">{{ .industry }}</span>
-          {{- with .role }}<span class="secondary">{{ . }}</span>{{ end }}
-        </div>
-        <div class="row-body">
-          <h3 class="title">{{ .title }}</h3>
-          {{- with .points }}
+    <div class="solutions">
+      {{- range site.Data.solutions }}
+      <article class="card solution">
+        <p class="meta"><span{{ if .current }} class="accent"{{ end }}>{{ .period }}</span><span>{{ .industry }}</span>{{ with .role }}<span>{{ . }}</span>{{ end }}</p>
+        <h3 class="title">{{ .title }}</h3>
+        {{- with .problem }}
+        <p class="problem">{{ . }}</p>
+        {{- end }}
+        {{- with .built }}
+        <div class="built">
+          <p class="kicker">What I built</p>
           <ul>
             {{- range . }}
             <li>{{ . }}</li>
             {{- end }}
           </ul>
-          {{- end }}
-          {{- partial "tag-list.html" (dict "tags" .stack "link" false) }}
         </div>
+        {{- end }}
+        {{- with .outcome }}
+        <p class="outcome">{{ . }}</p>
+        {{- end }}
+        {{- partial "tag-list.html" (dict "tags" .stack "link" false) }}
       </article>
       {{- end }}
     </div>

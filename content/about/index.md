@@ -2,7 +2,7 @@
 title: "About"
 heading: "About & résumé"
 eyebrow: "About"
-description: "Payments technical lead and Stripe-certified architect in Atlanta, Georgia. Eight years building payment systems at Slalom, Genuine Parts Company, Paya and Elavon."
+description: "Payments technical lead and Stripe-certified architect in Atlanta, Georgia. Nearly a decade building payment systems at Slalom, Genuine Parts Company, Paya and Elavon."
 summary: "A little blurb about me."
 keywords: ["Thomas", "Fuller", "software engineer", "payments", "Stripe", "Atlanta", "cloud", "FinTech", "developer", "résumé"]
 show_photo: true

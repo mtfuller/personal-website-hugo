@@ -4,8 +4,12 @@
     <ul class="nav-links">
       {{- $current := .RelPermalink }}
       {{- range site.Menus.main }}
+      {{- if hasPrefix .URL "http" }}
+      <li><a href="{{ .URL }}" target="_blank" rel="me noopener">{{ .Name }}</a></li>
+      {{- else }}
       {{- $url := .URL | relURL }}
       <li><a href="{{ $url }}"{{ if eq $current $url }} aria-current="page"{{ else if hasPrefix $current $url }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
+      {{- end }}
       {{- end }}
     </ul>
     {{ partial "theme-toggle.html" . }}

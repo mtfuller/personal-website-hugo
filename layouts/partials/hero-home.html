@@ -19,18 +19,6 @@
         {{- with $hero.focus }}
         <p class="focus">{{ delimit . " · " }}</p>
         {{- end }}
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#writing">Read the writing</a>
-          <a class="btn btn-ghost" href="#experience">See experience</a>
-          <span class="hero-social">
-            {{- with site.Params.linkedin }}
-            <a class="hero-link" href="{{ . }}" target="_blank" rel="me noopener">LinkedIn ↗</a>
-            {{- end }}
-            {{- with site.Params.github }}
-            <a class="hero-link" href="{{ . }}" target="_blank" rel="me noopener">GitHub ↗</a>
-            {{- end }}
-          </span>
-        </div>
       </div>
       <div class="hero-photo">
         <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="Thomas Fuller">

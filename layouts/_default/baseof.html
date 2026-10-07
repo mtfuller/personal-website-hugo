@@ -9,7 +9,7 @@
   <main id="main">
     {{- block "main" . }}{{ end }}
   </main>
-  {{- if ne .Layout "contact" }}{{ partial "contact-band.html" . }}{{ end }}
+  {{- partial "contact-band.html" . }}
   {{- partial "footer.html" . }}
   {{- partial "scripts.html" . }}
 </body>

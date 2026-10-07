@@ -1,0 +1,47 @@
+# Solutions shown on the homepage, newest first. Company names live on the
+# About page; here each card leads with the problem and what was built.
+#   problem:  one sentence on what needed solving
+#   built:    what you designed and shipped
+#   outcome:  optional; a result worth calling out (shown in accent)
+- period: "2025 – now"
+  current: true
+  industry: "Consulting"
+  role: "Technical lead"
+  title: "Payment and billing solutions for clients"
+  problem: "Clients across many industries need payment and billing systems designed and delivered on mission-critical timelines."
+  built:
+    - "Payment solutions designed and built for clients across a variety of industries."
+    - "Team lead on mission-critical client deliveries."
+  stack: ["Stripe", "Payments architecture", "Billing"]
+
+- period: "2022 – 2025"
+  industry: "Retail"
+  role: "Lead engineer"
+  title: "In-store card payments for a national retailer"
+  problem: "Every in-store sale needed card-present transactions handled reliably at national-retailer scale."
+  built:
+    - "Card-present transaction handling on Google Cloud: Cloud Run, GKE, Cloud SQL and Pub/Sub."
+    - "Internal tools that boosted the team's efficiency."
+    - "Coding standards adopted across a team of 7 engineers I led."
+  stack: ["Java", "Go", "TypeScript", "Google Cloud"]
+
+- period: "2020 – 2022"
+  industry: "Integrated payments"
+  role: "Team lead"
+  title: "A microservice payment gateway and its EMV terminal fleet"
+  problem: "Software platforms and their merchants needed new gateway capabilities, plus a fleet of EMV terminals that kept working."
+  built:
+    - "New gateway services on AWS (Lambda, KMS, EC2 and S3), from design through validation."
+    - "Delivered with a team of 6 engineers I led."
+    - "Subject-matter expertise for the platform's EMV-capable terminal fleet."
+  stack: ["TypeScript", "Node.js", "PHP", "AWS"]
+
+- period: "2018 – 2020"
+  industry: "Merchant acquiring"
+  role: "Engineer"
+  title: "A mobile payments SDK for merchant apps"
+  problem: "Merchants wanted to take card-present payments inside their own apps."
+  built:
+    - "SDK features designed, built, tested and documented end to end."
+    - "Shipped across iOS, Android and Windows."
+  stack: ["iOS", "Android", "Java"]
