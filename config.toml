@@ -3,17 +3,15 @@ languageCode = 'en-us'
 title = 'Thomas Fuller'
 
 [params]
-  description = "Thomas Fuller builds the software that moves money: card-present payments, payment gateways, EMV terminal fleets and AI-assisted engineering. Based in Atlanta, GA."
+  description = "Thomas Fuller builds the software that moves money: payments architecture, card-present systems, gateways and AI-assisted engineering. Payments technical lead and Stripe-certified architect in Atlanta, GA."
   author = "Thomas Fuller"
   location = "Atlanta"
   coordinates = "33.75° N, 84.39° W"
-  linkedin = "https://www.linkedin.com/in/thomas-fuller-407788b8"
+  linkedin = "https://www.linkedin.com/in/thomas-fuller-codes/"
   github = "https://github.com/mtfuller"
   twitter = "_thomasfuller_"
   # Optional: shown on the contact page and in the footer when set.
   email = ""
-  # Show the "in progress" posts from data/upcoming.yaml on the homepage.
-  showUpcoming = true
   # Optional: a Google Analytics 4 measurement ID (G-XXXXXXX). Leave empty to load no analytics.
   googleAnalytics = ""
   formspree = "https://formspree.io/f/mrgrlabr"

@@ -16,7 +16,6 @@ Then open http://localhost:1313. `hugo --minify` builds the site into `public/`.
 |---|---|
 | Homepage hero copy | `content/_index.md` (`hero:` front matter) |
 | Homepage experience rows | `data/experience.yaml` |
-| "In progress" posts on the homepage | `data/upcoming.yaml` (turn off with `showUpcoming` in `config.toml`) |
 | Résumé, with employers | `content/about/index.md` |
 | Posts | `content/blog/<slug>/index.md`, images in the same folder |
 | Projects | `content/projects/<slug>/index.md` |

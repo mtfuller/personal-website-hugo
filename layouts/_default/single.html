@@ -1,5 +1,5 @@
 {{ define "main" }}
-<article class="article">
+<article class="article{{ if .Params.resume }} resume{{ end }}">
   <div class="prose">
     {{ .Content }}
   </div>

@@ -145,7 +145,7 @@ a.tag:hover { border-color: var(--red); color: var(--head); }
 .featured .body { flex: 1 1 400px; min-width: 0; padding: 32px 36px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
 .featured .title { font-size: clamp(26px, 2.6vw, 32px); line-height: 1.15; letter-spacing: -0.025em; }
 
-.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
 .project { flex-direction: column; }
 .project .media { height: 170px; border-bottom: 1px solid var(--line); }
 .code-preview { margin: 0; height: 100%; padding: 18px 20px; overflow: hidden; font-family: var(--mono); font-size: 12px; line-height: 1.75; color: #A9B0B7; background: var(--code-bg); white-space: pre; }
@@ -232,6 +232,13 @@ a.tag:hover { border-color: var(--red); color: var(--head); }
 .prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
 .prose th { color: var(--head); font-weight: 600; }
 .prose sup { font-size: 0.7em; }
+
+/* Résumé (About page) */
+.resume .prose h3 { margin-top: 2em; padding-top: 1.2em; border-top: 1px solid var(--line); font-size: 22px; }
+.resume .prose h2 + h3 { margin-top: 0.8em; }
+.resume .prose h4 { margin-top: 1.3em; font-size: 17px; }
+.resume .prose h3 + h4 { margin-top: 0.5em; }
+.resume .prose h4 + p { margin-top: 0.2em; font-family: var(--mono); font-size: 13px; color: var(--dim); }
 
 .article-foot { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 28px; }
 .pager { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }

@@ -8,7 +8,7 @@
     {{ partial "section-header.html" (dict
       "label" "Experience"
       "id" "experience-title"
-      "title" "Eight years building payment systems across three industries"
+      "title" "Eight years designing and building payment systems"
       "actions" (slice
         (dict "text" "Full résumé" "url" $resume)
         (dict "text" "LinkedIn ↗" "url" site.Params.linkedin "external" true)
@@ -58,7 +58,6 @@
     ) }}
     {{- range $featured }}{{ partial "featured-post.html" . }}{{ end }}
     <div class="rows">
-      {{- if site.Params.showUpcoming }}{{ range site.Data.upcoming }}{{ partial "upcoming-row.html" . }}{{ end }}{{ end }}
       {{- range $rest }}{{ partial "post-row.html" . }}{{ end }}
     </div>
   </div>
@@ -72,7 +71,7 @@
     {{ partial "section-header.html" (dict
       "label" "Projects"
       "id" "projects-title"
-      "title" "Tools for people who build payments"
+      "title" "Things I've built"
       "actions" (slice
         (dict "text" "All projects" "url" $projectsSection.RelPermalink)
         (dict "text" "GitHub ↗" "url" site.Params.github "external" true)

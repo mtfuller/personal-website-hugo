@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Tools and experiments for people who build payments, plus a few things I built to learn."
+description: "Side projects and experiments, mostly built to learn something new."
 summary: "A collection of projects I am passionate about."
 draft: false
 ---
