@@ -1,0 +1,39 @@
+# Experience shown on the homepage. Company names live on the About page;
+# here each role leads with the system and the industry.
+- period: "2025 – now"
+  current: true
+  industry: "Consulting · many industries"
+  role: "Technical lead"
+  title: "Payment solutions for clients across industries"
+  points:
+    - "Design and build payment solutions for clients across a variety of industries."
+    - "Act as team lead, helping deliver mission-critical work for clients."
+
+- period: "2022 – 2025"
+  industry: "Retail"
+  role: "Lead engineer"
+  title: "In-store card payments for a national retailer"
+  points:
+    - "Built card-present transaction handling for in-store sales on Google Cloud: Cloud Run, GKE, Cloud SQL and Pub/Sub."
+    - "Led a team of 7 engineers and set the coding standards the whole team adopted."
+    - "Built internal tools that boosted the team's efficiency."
+  stack: ["Java", "Go", "TypeScript", "Google Cloud"]
+
+- period: "2020 – 2022"
+  industry: "Integrated payments"
+  role: "Team lead"
+  title: "A microservice payment gateway and its EMV terminal fleet"
+  points:
+    - "Led a team of 6 engineers delivering new gateway capabilities for software platforms and their merchants."
+    - "Was the subject-matter expert for the platform's fleet of EMV-capable terminals."
+    - "Led design and validation of new services on AWS, using Lambda, KMS, EC2 and S3."
+  stack: ["TypeScript", "Node.js", "PHP", "AWS"]
+
+- period: "2018 – 2020"
+  industry: "Merchant acquiring"
+  role: "Engineer"
+  title: "A mobile payments SDK for merchant apps"
+  points:
+    - "Designed, built, tested and documented SDK features merchants used to take card-present payments in their own apps."
+    - "Shipped across iOS, Android and Windows."
+  stack: ["iOS", "Android", "Java"]

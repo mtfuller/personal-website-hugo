@@ -4,3 +4,5 @@
 # Hugo
 .hugo_build.lock
 resources
+# Build output
+public

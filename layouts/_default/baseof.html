@@ -1,48 +1,16 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="{{.Summary}}">
-    <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", "}}{{ end }}">
-    
-    {{ block "post_meta" . }}
-
-    {{ end }}
-
-    <link rel="stylesheet" href="/pico.min.css">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-    <title>Thomas Fuller | {{ .Title }}</title>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110944297-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-110944297-1');
-    </script>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4029670445147496"
-     crossorigin="anonymous"></script>
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="application/javascript">
-      window.onload = function() {
-      var el = document.getElementById('g-recaptcha-response');
-      if (el) {
-        el.setAttribute('required', 'required');
-      }
-    }
-    </script>
-  </head>
-  <body>
-    {{ block "main" . }}
-
-    {{ end }}
-  </body>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+<head>
+  {{- partial "head.html" . }}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{- block "header" . }}{{ partial "page-header.html" . }}{{ end }}
+  <main id="main">
+    {{- block "main" . }}{{ end }}
+  </main>
+  {{- if ne .Layout "contact" }}{{ partial "contact-band.html" . }}{{ end }}
+  {{- partial "footer.html" . }}
+  {{- partial "scripts.html" . }}
+</body>
 </html>

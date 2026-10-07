@@ -1,0 +1,20 @@
+{{- /*
+  Usage: partial "section-header.html" (dict
+    "label" "Writing" "id" "writing-title" "title" "..."
+    "actions" (slice (dict "text" "All posts" "url" "/blog/" "external" false)))
+*/ -}}
+<div class="section-header">
+  <div class="titles">
+    <p class="label">{{ .label }}</p>
+    <h2 class="h2"{{ with .id }} id="{{ . }}"{{ end }}>{{ .title }}</h2>
+  </div>
+  {{- with .actions }}
+  <div class="actions">
+    {{- range . }}
+    {{- if .url }}
+    <a class="btn btn-secondary" href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>
+    {{- end }}
+    {{- end }}
+  </div>
+  {{- end }}
+</div>

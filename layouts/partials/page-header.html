@@ -1,0 +1,47 @@
+{{- /* Compact skyline header used by every page except the homepage. */ -}}
+{{- $bg := (resources.Get "hero-background.jpg").Resize "2000x q72" }}
+{{- $labels := dict "blog" "Writing" "projects" "Projects" "tags" "Topics" "about" "About" "contact" "Contact" }}
+{{- $eyebrow := .Params.eyebrow | default (index $labels .Section) }}
+{{- $eyebrowURL := "" }}
+{{- if and .IsPage (in (slice "blog" "projects") .Section) }}{{ $eyebrowURL = .CurrentSection.RelPermalink }}{{ end }}
+{{- $heading := .Params.heading | default .Title }}
+{{- $lede := .Description }}
+{{- if eq .Kind "term" }}
+  {{- $eyebrow = "Topic" }}
+  {{- $eyebrowURL = "tags/" | relURL }}
+  {{- $lede = printf "Everything I've written about %s." .Title }}
+{{- end }}
+{{- if eq .Kind "taxonomy" }}{{ $heading = "Topics" }}{{ $lede = "Browse writing by subject." }}{{ end }}
+{{- if eq .Kind "404" }}{{ $eyebrow = "404" }}{{ $heading = "That page doesn't exist." }}{{ $lede = "It may have moved, or the link may be mistyped." }}{{ end }}
+<header class="hero hero--page">
+  <img class="hero-bg" src="{{ $bg.RelPermalink }}" width="{{ $bg.Width }}" height="{{ $bg.Height }}" alt="">
+  <div class="hero-shade"></div>
+  <div class="hero-fade"></div>
+  <div class="wrap">
+    {{ partial "nav.html" . }}
+    <div class="page-head">
+      <div class="hero-copy">
+        {{- with $eyebrow }}
+        <p class="eyebrow">{{ if $eyebrowURL }}<a href="{{ $eyebrowURL }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}</p>
+        {{- end }}
+        <h1>{{ $heading }}</h1>
+        {{- with $lede }}
+        <p class="lede">{{ . }}</p>
+        {{- end }}
+        {{- if and .IsPage (eq .Section "blog") }}
+        <p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time><span>{{ .ReadingTime }} min read</span></p>
+        {{- partial "tag-list.html" (dict "tags" .Params.tags "link" true) }}
+        {{- end }}
+        {{- if and .IsPage (eq .Section "projects") }}
+        <p class="meta">{{ with .Params.status }}<span{{ if $.Params.status_accent }} class="accent"{{ end }}>{{ . }}</span>{{ end }}{{ with .Params.category }}<span>{{ . }}</span>{{ end }}</p>
+        {{- end }}
+      </div>
+      {{- if .Params.show_photo }}
+      {{- $photo := (resources.Get "PROFILE1.jpg").Resize "440x q85" }}
+      <div class="hero-photo">
+        <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="Thomas Fuller">
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,13 @@
+{{- $img := "" }}
+{{- with .Params.featured_image }}{{ with $.Resources.Get . }}{{ $img = partial "func/image.html" (dict "res" . "width" 1100) }}{{ end }}{{ end }}
+<article class="card featured hoverable">
+  {{- with $img }}
+  <div class="media"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Params.image_alt | default "" }}" loading="lazy"></div>
+  {{- end }}
+  <div class="body">
+    <p class="meta"><span class="accent">Featured</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time><span>{{ .ReadingTime }} min read</span></p>
+    <h3 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="snippet">{{ partial "func/snippet.html" . }}</p>
+    {{- partial "tag-list.html" (dict "tags" .Params.tags "link" true) }}
+  </div>
+</article>

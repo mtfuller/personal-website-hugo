@@ -4,6 +4,9 @@ summary: "In my early career as a software engineer, I remember being introduced
 keywords: ["systems thinking", "Donella Meadows", "software development", "architecture", "design", "components"]
 date: 2022-12-19
 featured_image: "images/splash.jpg"
+image_alt: "The parts of a disassembled typewriter laid out in neat rows"
+description: "Elements, interconnections and purpose: Donella Meadows' framework for the systems we build, and why changing a system's purpose is the riskiest change of all."
+tags: ["Systems thinking", "Architecture"]
 draft: false
 ---
 

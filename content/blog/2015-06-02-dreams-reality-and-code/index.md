@@ -4,6 +4,8 @@ summary: "To be honest, I never would have thought I would be walking down this.
 keywords: ["dream", "reality", "code", "programming"]
 date: 2015-06-02
 featured_image: "images/splash.jpg"
+description: "How a childhood plan to become an animator turned into a love of programming, or as I like to call it, creative math."
+tags: ["Craft", "Personal"]
 draft: false
 ---
 

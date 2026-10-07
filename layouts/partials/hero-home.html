@@ -1,0 +1,40 @@
+{{- $bg := (resources.Get "hero-background.jpg").Resize "2000x q72" }}
+{{- $photo := (resources.Get "PROFILE1.jpg").Resize "600x q85" }}
+{{- $hero := .Params.hero }}
+<header class="hero">
+  <img class="hero-bg" src="{{ $bg.RelPermalink }}" width="{{ $bg.Width }}" height="{{ $bg.Height }}" alt="" fetchpriority="high">
+  <div class="hero-shade"></div>
+  <div class="hero-fade"></div>
+  <div class="wrap">
+    {{ partial "nav.html" . }}
+    <div class="hero-body">
+      <div class="hero-copy">
+        {{- with $hero.eyebrow }}
+        <p class="eyebrow">{{ . }}</p>
+        {{- end }}
+        <h1>{{ $hero.title }}{{ with $hero.highlight }} <em>{{ . }}</em>{{ end }}</h1>
+        {{- with $hero.lede }}
+        <p class="lede">{{ . }}</p>
+        {{- end }}
+        {{- with $hero.focus }}
+        <p class="focus">{{ delimit . " · " }}</p>
+        {{- end }}
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#writing">Read the writing</a>
+          <a class="btn btn-ghost" href="#experience">See experience</a>
+          <span class="hero-social">
+            {{- with site.Params.linkedin }}
+            <a class="hero-link" href="{{ . }}" target="_blank" rel="me noopener">LinkedIn ↗</a>
+            {{- end }}
+            {{- with site.Params.github }}
+            <a class="hero-link" href="{{ . }}" target="_blank" rel="me noopener">GitHub ↗</a>
+            {{- end }}
+          </span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="Thomas Fuller">
+      </div>
+    </div>
+  </div>
+</header>

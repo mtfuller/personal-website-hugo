@@ -1,44 +1,8 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    {{ block "post_meta" . }}
-
-    {{ end }}
-
-    <link rel="stylesheet" href="/pico.min.css">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-    <title>Thomas Fuller | {{ .Title }}</title>
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="application/javascript">
-      window.onload = function() {
-      var el = document.getElementById('g-recaptcha-response');
-      if (el) {
-        el.setAttribute('required', 'required');
-      }
-    }
-    </script>
-  </head>
-  <body>
-    <div class="hero" data-theme="dark">
-        {{ partial "header/site-nav.html" . }}
-        {{ partial "header/page-title.html" . }}
-    </div>
-
-    <main class="container">
-        <h1>Unable to find page, sorry!</h1>
-        <p>
-            Please navigate to the <a href="/">homepage</a> and see if you can navigate to what you are looking for from there.
-        </p>
-    </main>
-
-    {{ partial "footer.html" . }}
-
-    <script src="/minimal-theme-switcher.js"></script>
-  </body>
-</html>
+{{ define "main" }}
+<div class="wrap section">
+  <div class="actions">
+    <a class="btn btn-primary" href="{{ "/" | relURL }}">Go to the homepage</a>
+    <a class="btn btn-secondary" href="{{ "blog/" | relURL }}">Browse the writing</a>
+  </div>
+</div>
+{{ end }}

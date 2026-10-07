@@ -1,34 +1,31 @@
-{{ define "post_meta" }}
-
-    <meta property='og:title' content='{{ .Title }}'/>
-    <meta property='og:image' content='{{.Permalink}}{{.Params.featured_image}}'/>
-    <meta property='og:description' content='{{ .Summary }}'/>
-    <meta property='og:url' content='{{.Permalink}}'/>
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@_thomasfuller_">
-    <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ .Summary }}">
-    <meta name="twitter:image" content="{{.Permalink}}{{.Params.featured_image}}">
-
-{{ end }}
-
 {{ define "main" }}
+<article class="article">
+  {{- with .Params.featured_image }}{{ with $.Resources.Get . }}
+  {{- $img := partial "func/image.html" (dict "res" . "width" 1520) }}
+  <figure class="cover">
+    <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $.Params.image_alt | default "" }}">
+  </figure>
+  {{- end }}{{ end }}
 
-    {{ $image := .Resources.Get "images/splash.jpg" }}
-    {{ $image := $image.Resize "1000x q75" }}
+  <div class="prose">
+    {{ .Content }}
+  </div>
 
-    <div class="hero" data-theme="dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.8)), url('{{$image.RelPermalink}}');">
-        {{ partial "header/site-nav.html" . }}
-        {{ partial "header/post-title.html" . }}
-    </div>
-
-    <main class="container">
-        {{ .Content }}
-    </main>
-
-    {{ partial "footer.html" . }}
-
-    <script src="/minimal-theme-switcher.js"></script>
-
+  <footer class="article-foot">
+    {{- partial "tag-list.html" (dict "tags" .Params.tags "link" true) }}
+    {{- if or .PrevInSection .NextInSection }}
+    <nav class="pager" aria-label="More writing">
+      {{- range slice .NextInSection .PrevInSection }}
+      {{- with . }}
+      {{- $newer := gt .Date.Unix $.Date.Unix }}
+      <a href="{{ .RelPermalink }}"{{ if not $newer }} class="next"{{ end }}>
+        <span class="dir">{{ if $newer }}← Newer{{ else }}Older →{{ end }}</span>
+        <span class="name">{{ .Title }}</span>
+      </a>
+      {{- end }}
+      {{- end }}
+    </nav>
+    {{- end }}
+  </footer>
+</article>
 {{ end }}
