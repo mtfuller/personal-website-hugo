@@ -3,19 +3,15 @@ languageCode = 'en-us'
 title = 'Thomas Fuller'
 
 [params]
-  description = "Thomas Fuller builds the software that moves money: payments architecture, card-present systems, gateways and AI-assisted engineering. Payments technical lead and Stripe-certified architect in Atlanta, GA."
+  description = "Thomas Fuller builds solutions that move money: payments architecture, card-present systems, gateways and AI-assisted engineering. Payments technical lead and Stripe-certified architect in Atlanta, GA."
   author = "Thomas Fuller"
   location = "Atlanta"
   coordinates = "33.75° N, 84.39° W"
   linkedin = "https://www.linkedin.com/in/thomas-fuller-codes/"
   github = "https://github.com/mtfuller"
   twitter = "_thomasfuller_"
-  # Optional: shown on the contact page and in the footer when set.
-  email = ""
   # Optional: a Google Analytics 4 measurement ID (G-XXXXXXX). Leave empty to load no analytics.
   googleAnalytics = ""
-  formspree = "https://formspree.io/f/mrgrlabr"
-  recaptchaSiteKey = "6LePyEYcAAAAAKhnpMZoOrW8g9pV8wQh_PFDkPSr"
 
 [[menus.main]]
   name = "Writing"
@@ -30,8 +26,8 @@ title = 'Thomas Fuller'
   url = "/about/"
   weight = 3
 [[menus.main]]
-  name = "Contact"
-  url = "/contact/"
+  name = "LinkedIn ↗"
+  url = "https://www.linkedin.com/in/thomas-fuller-codes/"
   weight = 4
 
 [taxonomies]

@@ -1,6 +1,6 @@
 {{- /* Compact skyline header used by every page except the homepage. */ -}}
 {{- $bg := (resources.Get "hero-background.jpg").Resize "2000x q72" }}
-{{- $labels := dict "blog" "Writing" "projects" "Projects" "tags" "Topics" "about" "About" "contact" "Contact" }}
+{{- $labels := dict "blog" "Writing" "projects" "Projects" "tags" "Topics" "about" "About" }}
 {{- $eyebrow := .Params.eyebrow | default (index $labels .Section) }}
 {{- $eyebrowURL := "" }}
 {{- if and .IsPage (in (slice "blog" "projects") .Section) }}{{ $eyebrowURL = .CurrentSection.RelPermalink }}{{ end }}

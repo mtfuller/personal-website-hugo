@@ -1,11 +1,19 @@
 <footer class="site-footer">
-  <div class="wrap">
-    <span>© {{ now.Year }} {{ site.Params.author }}</span>
-    <nav aria-label="Elsewhere">
-      {{- with site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="me noopener">LinkedIn</a>{{ end }}
-      {{- with site.Params.github }}<a href="{{ . }}" target="_blank" rel="me noopener">GitHub</a>{{ end }}
-      {{- with site.GetPage "/blog" }}{{ with .OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}{{ end }}
-    </nav>
-    <span>{{ site.Params.location }} · {{ site.Params.coordinates }}</span>
+  <div class="wrap footer-cta">
+    <h2>Want to chat about something? Hit me up.</h2>
+    {{- with site.Params.linkedin }}
+    <a class="link" href="{{ . }}" target="_blank" rel="me noopener">Message me on LinkedIn ↗</a>
+    {{- end }}
+  </div>
+  <div class="footer-base">
+    <div class="wrap">
+      <span>© {{ now.Year }} {{ site.Params.author }}</span>
+      <nav class="dots" aria-label="Elsewhere">
+        {{- with site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="me noopener">LinkedIn</a>{{ end }}
+        {{- with site.Params.github }}<a href="{{ . }}" target="_blank" rel="me noopener">GitHub</a>{{ end }}
+        {{- with site.GetPage "/blog" }}{{ with .OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}{{ end }}
+      </nav>
+      <span>{{ site.Params.location }} · {{ site.Params.coordinates }}</span>
+    </div>
   </div>
 </footer>

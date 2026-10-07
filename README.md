@@ -15,11 +15,11 @@ Then open http://localhost:1313. `hugo --minify` builds the site into `public/`.
 | What | Where |
 |---|---|
 | Homepage hero copy | `content/_index.md` (`hero:` front matter) |
-| Homepage experience rows | `data/experience.yaml` |
+| Homepage solutions cards | `data/solutions.yaml` |
 | Résumé, with employers | `content/about/index.md` |
 | Posts | `content/blog/<slug>/index.md`, images in the same folder |
 | Projects | `content/projects/<slug>/index.md` |
-| Social links, email, form endpoint, analytics | `[params]` in `config.toml` |
+| Social links, analytics | `[params]` in `config.toml` |
 | Styles (both themes) | `assets/css/main.css` |
 | Templates | `layouts/` |
 

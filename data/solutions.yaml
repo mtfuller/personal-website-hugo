@@ -1,0 +1,51 @@
+# Solutions shown on the homepage. Company names live on the About page;
+# each card leads with the industry and what was built.
+#   flow:     the payment path, left to right; wrap the parts you built in
+#             [brackets] and they're highlighted
+#   summary:  one or two sentences on the problem and the solution
+#   built:    a couple of short specifics
+#   outcome:  optional; a result worth calling out (shown in accent)
+#   role, period: shown small at the foot of the card
+- industry: "Retail"
+  title: "In-store card payments for a national retailer"
+  summary: "Card-present transaction handling behind every in-store sale, built cloud-native on Google Cloud."
+  flow: ["Store checkout", "[Card-present services]", "Processor"]
+  built:
+    - "Services on Cloud Run and GKE, backed by Cloud SQL and Pub/Sub."
+    - "Internal tooling and coding standards that sped up the whole team."
+  stack: ["Java", "Go", "TypeScript", "Google Cloud"]
+  role: "Lead engineer"
+  period: "2022 – 2025"
+
+- industry: "Integrated payments"
+  title: "A payment gateway and its EMV terminal fleet"
+  summary: "New gateway capabilities for software platforms and their merchants, plus the EMV terminals they take payments on."
+  flow: ["[EMV terminals]", "[Payment gateway]", "Processor"]
+  built:
+    - "Microservices on AWS Lambda, KMS, EC2 and S3, from design through validation."
+    - "Subject-matter expertise for the platform's EMV-capable terminal fleet."
+  stack: ["TypeScript", "Node.js", "PHP", "AWS"]
+  role: "Team lead"
+  period: "2020 – 2022"
+
+- industry: "Consulting"
+  title: "Payment and billing architectures on Stripe"
+  summary: "Payment and billing solutions for clients across many industries, designed and delivered as a Stripe-certified architect."
+  flow: ["Client systems", "[Payments + billing design]", "Stripe"]
+  built:
+    - "Payment solutions for clients across a variety of industries."
+    - "Mission-critical client deliveries, as team lead."
+  stack: ["Stripe", "Payments", "Billing"]
+  role: "Technical lead"
+  period: "2025 – now"
+
+- industry: "Merchant acquiring"
+  title: "A mobile payments SDK for merchant apps"
+  summary: "Let merchants take card-present payments inside their own apps, on every platform they ship to."
+  flow: ["Card reader", "[Payments SDK]", "Merchant app", "Acquirer"]
+  built:
+    - "SDK features designed, built, tested and documented end to end."
+    - "Shipped across iOS, Android and Windows."
+  stack: ["iOS", "Android", "Java"]
+  role: "Engineer"
+  period: "2018 – 2020"

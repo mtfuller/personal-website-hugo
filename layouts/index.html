@@ -1,37 +1,56 @@
 {{ define "header" }}{{ partial "hero-home.html" . }}{{ end }}
 
 {{ define "main" }}
-{{- /* ---------- Experience ---------- */}}
-<section id="experience" aria-labelledby="experience-title">
+{{- /* ---------- Solutions ---------- */}}
+<section id="solutions" aria-labelledby="solutions-title">
   <div class="wrap section">
     {{- $resume := "" }}{{ with site.GetPage "/about" }}{{ $resume = .RelPermalink }}{{ end }}
     {{ partial "section-header.html" (dict
-      "label" "Experience"
-      "id" "experience-title"
-      "title" "Eight years designing and building payment systems"
+      "label" "Solutions"
+      "id" "solutions-title"
+      "title" "Payment systems I've designed and built"
       "actions" (slice
         (dict "text" "Full résumé" "url" $resume)
         (dict "text" "LinkedIn ↗" "url" site.Params.linkedin "external" true)
       )
     ) }}
-    <div class="rows">
-      {{- range site.Data.experience }}
-      <article class="row">
-        <div class="row-meta">
-          <span class="primary">{{ if .current }}<span class="dot" aria-hidden="true"></span>{{ end }}{{ .period }}</span>
-          <span class="secondary">{{ .industry }}</span>
-          {{- with .role }}<span class="secondary">{{ . }}</span>{{ end }}
+    <div class="solutions">
+      {{- range site.Data.solutions }}
+      <article class="card solution">
+        {{- with .flow }}
+        <div class="media">
+          <div class="flow-head" aria-hidden="true"><span>Payment flow</span><span class="flow-key">Built</span></div>
+          <ol class="flow" aria-label="Payment flow">
+            {{- range . }}
+            {{- if hasPrefix . "[" }}
+            <li class="built"><strong>{{ trim . "[]" }}</strong><span class="visually-hidden"> (built)</span></li>
+            {{- else }}
+            <li>{{ . }}</li>
+            {{- end }}
+            {{- end }}
+          </ol>
         </div>
-        <div class="row-body">
+        {{- end }}
+        <div class="body">
+          <p class="label">{{ .industry }}</p>
           <h3 class="title">{{ .title }}</h3>
-          {{- with .points }}
-          <ul>
+          {{- with .summary }}
+          <p class="summary">{{ . }}</p>
+          {{- end }}
+          {{- with .built }}
+          <ul class="built-list">
             {{- range . }}
             <li>{{ . }}</li>
             {{- end }}
           </ul>
           {{- end }}
+          {{- with .outcome }}
+          <p class="outcome">{{ . }}</p>
+          {{- end }}
           {{- partial "tag-list.html" (dict "tags" .stack "link" false) }}
+          {{- if or .role .period }}
+          <p class="meta foot">{{ with .role }}<span>{{ . }}</span>{{ end }}{{ with .period }}<span>{{ . }}</span>{{ end }}</p>
+          {{- end }}
         </div>
       </article>
       {{- end }}

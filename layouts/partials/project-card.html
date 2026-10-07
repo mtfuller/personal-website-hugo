@@ -23,7 +23,7 @@
     </ul>
     {{- end }}
     {{- partial "tag-list.html" (dict "tags" .Params.stack "link" false) }}
-    <div class="foot">
+    <div class="foot dots">
       {{- if $url }}<a class="link" href="{{ $url }}">Write-up</a>{{ end }}
       {{- with .Params.repo }}<a class="link" href="{{ . }}" target="_blank" rel="noopener">GitHub ↗</a>{{ end }}
       {{- with .Params.note }}<span class="soon">{{ . }}</span>{{ end }}
