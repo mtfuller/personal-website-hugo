@@ -1,0 +1,39 @@
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll('[data-theme-toggle]');
+    var meta = document.querySelector('meta[name="theme-color"]');
+
+    function current() { return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
+    function sync() {
+      var next = current() === 'light' ? 'dark' : 'light';
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute('aria-label', 'Switch to ' + next + ' theme');
+        buttons[i].setAttribute('title', 'Switch to ' + next + ' theme');
+      }
+      if (meta) meta.setAttribute('content', current() === 'light' ? '#F7F7F8' : '#1E1E25');
+    }
+    function apply(theme) { root.setAttribute('data-theme', theme); sync(); }
+
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function () {
+        var next = current() === 'light' ? 'dark' : 'light';
+        apply(next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    }
+
+    // Follow the system setting until the visitor chooses a theme.
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: light)');
+      var onChange = function (e) {
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (err) {}
+        if (!saved) apply(e.matches ? 'light' : 'dark');
+      };
+      if (mq.addEventListener) mq.addEventListener('change', onChange);
+      else if (mq.addListener) mq.addListener(onChange);
+    }
+    sync();
+  })();
+</script>

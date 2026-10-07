@@ -1,0 +1,13 @@
+{{- /*
+  Returns an image resource sized for display.
+  Usage: partial "func/image.html" (dict "res" $resource "width" 1200)
+  GIFs (animated) and images already narrower than the target are returned untouched.
+*/ -}}
+{{- $res := .res -}}
+{{- $out := $res -}}
+{{- if and $res (ne $res.MediaType.SubType "gif") (ne $res.MediaType.SubType "svg") -}}
+  {{- if gt $res.Width .width -}}
+    {{- $out = $res.Resize (printf "%dx q78" .width) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

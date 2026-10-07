@@ -1,0 +1,4 @@
+{{- /* Short plain-text summary for a page: description first, then summary. */ -}}
+{{- $s := .Description -}}
+{{- if not $s }}{{ $s = .Summary | plainify | htmlUnescape }}{{ end -}}
+{{- return ($s | truncate 220) -}}

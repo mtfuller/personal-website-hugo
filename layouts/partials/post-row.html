@@ -1,0 +1,11 @@
+<article class="row hoverable">
+  <div class="row-meta">
+    <time class="primary" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    <span class="secondary">{{ .ReadingTime }} min read</span>
+  </div>
+  <div class="row-body">
+    <h3 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="snippet">{{ partial "func/snippet.html" . }}</p>
+    {{- partial "tag-list.html" (dict "tags" .Params.tags "link" true) }}
+  </div>
+</article>

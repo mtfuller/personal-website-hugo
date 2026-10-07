@@ -1,0 +1,32 @@
+{{- $img := "" }}
+{{- with .Params.featured_image }}{{ with $.Resources.Get . }}{{ $img = partial "func/image.html" (dict "res" . "width" 800) }}{{ end }}{{ end }}
+{{- $url := .RelPermalink }}
+<article class="card project{{ if $url }} hoverable{{ end }}">
+  <div class="media">
+    {{- with $img }}
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Params.image_alt | default "" }}" loading="lazy">
+    {{- else }}{{ with $.Params.preview }}
+    <pre class="code-preview" aria-hidden="true">{{ . | safeHTML }}</pre>
+    {{- end }}{{ end }}
+  </div>
+  <div class="body">
+    <p class="meta">{{ with .Params.status }}<span{{ if $.Params.status_accent }} class="accent"{{ end }}>{{ . }}</span>{{ end }}{{ with .Params.category }}<span>{{ . }}</span>{{ end }}</p>
+    <h3 class="title">{{ if $url }}<a href="{{ $url }}">{{ .Title }}</a>{{ else }}{{ .Title }}{{ end }}</h3>
+    {{- with .Description }}
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- with .Params.highlights }}
+    <ul>
+      {{- range . }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    {{- partial "tag-list.html" (dict "tags" .Params.stack "link" false) }}
+    <div class="foot">
+      {{- if $url }}<a class="link" href="{{ $url }}">Write-up</a>{{ end }}
+      {{- with .Params.repo }}<a class="link" href="{{ . }}" target="_blank" rel="noopener">GitHub ↗</a>{{ end }}
+      {{- with .Params.note }}<span class="soon">{{ . }}</span>{{ end }}
+    </div>
+  </div>
+</article>

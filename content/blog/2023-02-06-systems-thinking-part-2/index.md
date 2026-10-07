@@ -4,6 +4,10 @@ summary: "In the last post, we explored how \"systems thinking\" offers a framew
 keywords: ["systems thinking", "Donella Meadows", "software development", "architecture", "design", "components"]
 date: 2023-02-07
 featured_image: "images/splash.jpg"
+image_alt: "Aerial view of a highway interchange with looping ramps"
+description: "Why UML faded, and how stock-and-flow models and C4 diagrams give engineers simpler mental models of large codebases."
+tags: ["Systems thinking", "Architecture", "C4"]
+featured: true
 draft: false
 ---
 

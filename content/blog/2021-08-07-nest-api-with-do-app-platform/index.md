@@ -4,6 +4,8 @@ summary: "Nest.js is a Node.js API framework that includes a variety of built...
 keywords: ["Nest.js", "Node.js", "DigitalOcean", "App Platform", "api", "framework", "deploy"]
 date: 2021-09-07
 featured_image: "images/splash.jpg"
+description: "A step-by-step guide to taking a Nest.js API from a Git repository to a running, auto-deploying service on DigitalOcean's App Platform."
+tags: ["Cloud", "Node.js", "Tutorial"]
 draft: false
 ---
 

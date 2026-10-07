@@ -4,6 +4,17 @@ summary: "About a year ago, I was just starting to learn Node.js. During that...
 keywords: ["Socket.io", "Node.js", "real-time", "entity", "component", "system", "spatial hasing"]
 date: 2018-04-29
 featured_image: "images/demo.gif"
+image_alt: "Gameplay of Pew-Pew-Pew.io: ships moving and firing in a browser arena"
+description: "A multiplayer browser game built to see how far Socket.io could go for real-time state sync between a server and many clients."
+status: "Shipped 2018"
+category: "Real-time systems"
+weight: 30
+highlights:
+  - "Entity-component system for game logic"
+  - "Spatial hashing keeps collision checks cheap as players join"
+  - "Express and Socket.io server streaming state to every client"
+stack: ["Node.js", "Socket.io", "Express"]
+repo: "https://github.com/mtfuller/pew-pew-pew.io"
 draft: false
 ---
 

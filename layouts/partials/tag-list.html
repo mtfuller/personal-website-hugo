@@ -1,0 +1,9 @@
+{{- /* Usage: partial "tag-list.html" (dict "tags" .Params.tags "link" true) */ -}}
+{{- $link := .link -}}
+{{- with .tags }}
+<ul class="tags">
+  {{- range . }}
+  <li>{{ if $link }}<a class="tag" href="{{ printf "tags/%s/" (. | urlize | lower) | relURL }}">{{ . }}</a>{{ else }}<span class="tag">{{ . }}</span>{{ end }}</li>
+  {{- end }}
+</ul>
+{{- end }}

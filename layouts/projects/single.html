@@ -1,34 +1,43 @@
-{{ define "post_meta" }}
-
-    <meta property='og:title' content='{{ .Title }}'/>
-    <meta property='og:image' content='{{.Permalink}}{{.Params.featured_image}}'/>
-    <meta property='og:description' content='{{ .Summary }}'/>
-    <meta property='og:url' content='{{.Permalink}}'/>
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@_thomasfuller_">
-    <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ .Summary }}">
-    <meta name="twitter:image" content="{{.Permalink}}{{.Params.featured_image}}">
-
-{{ end }}
-
 {{ define "main" }}
+<article class="article">
+  {{- $img := "" }}
+  {{- with .Params.featured_image }}{{ with $.Resources.Get . }}{{ $img = partial "func/image.html" (dict "res" . "width" 1520) }}{{ end }}{{ end }}
+  {{- if or $img .Params.preview }}
+  <figure class="project-hero">
+    {{- with $img }}
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Params.image_alt | default "" }}">
+    {{- else }}
+    <pre class="code-preview" aria-hidden="true">{{ .Params.preview | safeHTML }}</pre>
+    {{- end }}
+  </figure>
+  {{- end }}
 
-    {{ $image := .Resources.Get .Params.featured_image }}
-    {{ $image := $image.Resize "1000x q75" }}
-
-    <div class="hero" data-theme="dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.8)), url('{{.RelPermalink}}/{{.Params.featured_image}}');">
-        {{ partial "header/site-nav.html" . }}
-        {{ partial "header/post-title.html" . }}
+  <div class="facts">
+    {{- with .Params.highlights }}
+    <div>
+      <h2>Highlights</h2>
+      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
     </div>
+    {{- end }}
+    {{- with .Params.stack }}
+    <div>
+      <h2>Built with</h2>
+      {{ partial "tag-list.html" (dict "tags" . "link" false) }}
+    </div>
+    {{- end }}
+    {{- if or .Params.repo .Params.demo }}
+    <div>
+      <h2>Links</h2>
+      <div class="actions">
+        {{- with .Params.repo }}<a class="btn btn-secondary" href="{{ . }}" target="_blank" rel="noopener">GitHub ↗</a>{{ end }}
+        {{- with .Params.demo }}<a class="btn btn-secondary" href="{{ . }}" target="_blank" rel="noopener">Live demo ↗</a>{{ end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
 
-    <main class="container">
-        {{ .Content }}
-    </main>
-
-    {{ partial "footer.html" . }}
-
-    <script src="/minimal-theme-switcher.js"></script>
-
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
 {{ end }}
