@@ -1,5 +1,5 @@
 {{- $bg := (resources.Get "hero-background.jpg").Resize "2000x q72" }}
-{{- $photo := (resources.Get "PROFILE1.jpg").Resize "600x q85" }}
+{{- $photo := (resources.Get "profile.jpg").Resize "600x q85" }}
 {{- $hero := .Params.hero }}
 <header class="hero">
   <img class="hero-bg" src="{{ $bg.RelPermalink }}" width="{{ $bg.Width }}" height="{{ $bg.Height }}" alt="" fetchpriority="high">

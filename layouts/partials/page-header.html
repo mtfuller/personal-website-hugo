@@ -37,7 +37,7 @@
         {{- end }}
       </div>
       {{- if .Params.show_photo }}
-      {{- $photo := (resources.Get "PROFILE1.jpg").Resize "440x q85" }}
+      {{- $photo := (resources.Get "profile.jpg").Resize "440x q85" }}
       <div class="hero-photo">
         <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="Thomas Fuller">
       </div>
