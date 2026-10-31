@@ -6,6 +6,30 @@
 #   built:    a couple of short specifics
 #   outcome:  optional; a result worth calling out (shown in accent)
 #   role, period: shown small at the foot of the card
+- industry: "Home warranty"
+  title: "Stripe Billing for a home warranty company"
+  summary: "A Stripe Billing integration for a home warranty provider's plans and recurring payments."
+  flow: ["Customer plans", "[Billing integration]", "Stripe Billing"]
+  stack: ["Stripe Billing"]
+  role: "Technical lead"
+  period: "2025 – now"
+
+- industry: "eLearning"
+  title: "Stripe enhancements for a global eLearning platform"
+  summary: "Enhancements to an existing Stripe integration for an eLearning platform serving customers worldwide."
+  flow: ["Learners", "[Stripe integration]", "Stripe"]
+  stack: ["Stripe"]
+  role: "Technical lead"
+  period: "2025 – now"
+
+- industry: "Accounting software"
+  title: "Adyen for Platforms for an accounting software company"
+  summary: "An Adyen for Platforms integration, embedding payments into accounting software for its business users."
+  flow: ["Platform users", "[Embedded payments]", "Adyen for Platforms"]
+  stack: ["Adyen for Platforms"]
+  role: "Technical lead"
+  period: "2025 – now"
+
 - industry: "Retail"
   title: "In-store card payments for a national retailer"
   summary: "Card-present transaction handling behind every in-store sale, built cloud-native on Google Cloud."
@@ -27,17 +51,6 @@
   stack: ["TypeScript", "Node.js", "PHP", "AWS"]
   role: "Team lead"
   period: "2020 – 2022"
-
-- industry: "Consulting"
-  title: "Payment and billing architectures on Stripe"
-  summary: "Payment and billing solutions for clients across many industries, designed and delivered as a Stripe-certified architect."
-  flow: ["Client systems", "[Payments + billing design]", "Stripe"]
-  built:
-    - "Payment solutions for clients across a variety of industries."
-    - "Mission-critical client deliveries, as team lead."
-  stack: ["Stripe", "Payments", "Billing"]
-  role: "Technical lead"
-  period: "2025 – now"
 
 - industry: "Merchant acquiring"
   title: "A mobile payments SDK for merchant apps"
