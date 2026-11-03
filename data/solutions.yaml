@@ -14,14 +14,6 @@
   role: "Technical lead"
   period: "2025 – now"
 
-- industry: "eLearning"
-  title: "Stripe enhancements for a global eLearning platform"
-  summary: "Enhancements to an existing Stripe integration for an eLearning platform serving customers worldwide."
-  flow: ["Learners", "[Stripe integration]", "Stripe"]
-  stack: ["Stripe"]
-  role: "Technical lead"
-  period: "2025 – now"
-
 - industry: "Accounting software"
   title: "Adyen for Platforms for an accounting software company"
   summary: "An Adyen for Platforms integration, embedding payments into accounting software for its business users."
@@ -51,14 +43,3 @@
   stack: ["TypeScript", "Node.js", "PHP", "AWS"]
   role: "Team lead"
   period: "2020 – 2022"
-
-- industry: "Merchant acquiring"
-  title: "A mobile payments SDK for merchant apps"
-  summary: "Let merchants take card-present payments inside their own apps, on every platform they ship to."
-  flow: ["Card reader", "[Payments SDK]", "Merchant app", "Acquirer"]
-  built:
-    - "SDK features designed, built, tested and documented end to end."
-    - "Shipped across iOS, Android and Windows."
-  stack: ["iOS", "Android", "Java"]
-  role: "Engineer"
-  period: "2018 – 2020"
