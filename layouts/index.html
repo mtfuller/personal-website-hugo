@@ -8,7 +8,7 @@
     {{ partial "section-header.html" (dict
       "label" "Solutions"
       "id" "solutions-title"
-      "title" "Payment systems I've designed and built"
+      "title" "Projects I've worked on"
       "actions" (slice
         (dict "text" "Full résumé" "url" $resume)
         (dict "text" "LinkedIn ↗" "url" site.Params.linkedin "external" true)
@@ -69,7 +69,7 @@
     {{ partial "section-header.html" (dict
       "label" "Writing"
       "id" "writing-title"
-      "title" "Notes on building software that moves money"
+      "title" "Things I'm thinking about"
       "actions" (slice
         (dict "text" "All posts" "url" $blog.RelPermalink)
         (dict "text" "RSS" "url" (($blog.OutputFormats.Get "rss").RelPermalink))

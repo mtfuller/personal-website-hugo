@@ -12,15 +12,15 @@
   flow: ["Customer plans", "[Billing integration]", "Stripe Billing"]
   stack: ["Stripe Billing"]
   role: "Technical lead"
-  period: "2025 – now"
+  period: "2025 - 2026"
 
 - industry: "Accounting software"
   title: "Adyen for Platforms for an accounting software company"
-  summary: "An Adyen for Platforms integration, embedding payments into accounting software for its business users."
-  flow: ["Platform users", "[Embedded payments]", "Adyen for Platforms"]
+  summary: "An Adyen for Platforms integration, powering reconciliation and payout for users."
+  flow: ["Platform users", "[Ledger + Payout Engine]", "Adyen for Platforms"]
   stack: ["Adyen for Platforms"]
   role: "Technical lead"
-  period: "2025 – now"
+  period: "2025 - 2026"
 
 - industry: "Retail"
   title: "In-store card payments for a national retailer"
