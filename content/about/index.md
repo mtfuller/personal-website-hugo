@@ -27,6 +27,9 @@ Jun 2025 – Present · Atlanta Metropolitan Area
 
 - Worked to design and build payment solutions for clients across a variety of industries.
 - Acted as team lead to help deliver mission-critical deliverables to clients.
+- Stripe Billing integration for a home warranty company.
+- Stripe integration enhancements for a global eLearning platform.
+- Adyen for Platforms integration for an accounting software company.
 
 ### Genuine Parts Company
 
@@ -78,7 +81,7 @@ Stripe · Issued Jul 2026 · Expires Jul 2028 · Credential ID 189910606
 
 ## Skills
 
-**Payments:** Stripe, PCI DSS, EMV, point-to-point encryption, tokenization
+**Payments:** Stripe, Adyen for Platforms, PCI DSS, EMV, point-to-point encryption, tokenization
 
 **Backend:** Java (Spring Boot), Go (Gin), TypeScript (Node, NestJS), MySQL, PostgreSQL
 
