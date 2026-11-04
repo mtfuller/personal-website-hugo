@@ -1,17 +1,20 @@
 <nav class="nav" aria-label="Main">
   <a class="brand" href="{{ "/" | relURL }}">{{ site.Title }}</a>
-  <div class="nav-right">
-    <ul class="nav-links">
-      {{- $current := .RelPermalink }}
-      {{- range site.Menus.main }}
-      {{- if hasPrefix .URL "http" }}
-      <li><a href="{{ .URL }}" target="_blank" rel="me noopener">{{ .Name }}</a></li>
-      {{- else }}
-      {{- $url := .URL | relURL }}
-      <li><a href="{{ $url }}"{{ if eq $current $url }} aria-current="page"{{ else if hasPrefix $current $url }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
-      {{- end }}
-      {{- end }}
-    </ul>
+  <ul class="nav-links" id="nav-links">
+    {{- $current := .RelPermalink }}
+    {{- range site.Menus.main }}
+    {{- if hasPrefix .URL "http" }}
+    <li><a href="{{ .URL }}" target="_blank" rel="me noopener">{{ .Name }}</a></li>
+    {{- else }}
+    {{- $url := .URL | relURL }}
+    <li><a href="{{ $url }}"{{ if eq $current $url }} aria-current="page"{{ else if hasPrefix $current $url }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
+    {{- end }}
+    {{- end }}
+  </ul>
+  <div class="nav-actions">
     {{ partial "theme-toggle.html" . }}
+    <button class="nav-toggle" type="button" data-nav-toggle aria-controls="nav-links" aria-expanded="false" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path class="bar bar-top" d="M4 7h16"/><path class="bar bar-mid" d="M4 12h16"/><path class="bar bar-bot" d="M4 17h16"/></svg>
+    </button>
   </div>
 </nav>
