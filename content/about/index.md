@@ -1,6 +1,6 @@
 ---
 title: "About"
-heading: "About & résumé"
+heading: "About"
 eyebrow: "About"
 description: "Payments technical lead and Stripe-certified architect in Atlanta, Georgia. Nearly a decade building payment systems at Slalom, Genuine Parts Company, Paya and Elavon."
 summary: "A little blurb about me."
